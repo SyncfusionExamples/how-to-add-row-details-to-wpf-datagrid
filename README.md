@@ -496,6 +496,8 @@ private DataTemplate GetDataTemplate()
 
 ```
 
+KB article - [How to add row details to wpf datagrid?](https://www.syncfusion.com/kb/12320/how-to-add-row-details-to-wpf-datagrid-sfdatagrid)
+
 ## Requirements to run the demo 
 
 Visual Studio 2015 and above versions.
