@@ -473,7 +473,7 @@ You can customize height of the row that contains [RowTemplate](https://help.syn
 
 ## Populating record template view using events 
 
-You can set the [RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) on-demand when expanding the record by using the [GridDetailsViewExpandingEventArgs.RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs.html#Syncfusion_UI_Xaml_Grid_GridDetailsViewExpandingEventArgs_RowTemplate) property in [SfDataGrid.DetailsViewExpanding](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html) event handler.
+You can set the [RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) on-demand when expanding the record by using the [GridDetailsViewExpandingEventArgs.RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs.html#Syncfusion_UI_Xaml_Grid_GridDetailsViewExpandingEventArgs_RowTemplate) property in [SfDataGrid.DetailsViewExpanding](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_DetailsViewExpanding) event handler.
 
 ```c#
 this.dataGrid.DetailsViewExpanding += DataGrid_DetailsViewExpanding;
