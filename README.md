@@ -1,23 +1,24 @@
-# How to add row details to wpf datagrid?
+# How to Add Row Details in WPF DataGrid?
 
 ## About the sample
 
-This example illustrates how to add row details to [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) (SfDataGrid)?
+This example illustrates how to add row details to [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) (SfDataGrid).
 
-[WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid) (SfDataGrid) provides support to represent additional information of a row using [TemplateViewDefinition](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html) that can be defined in datagrid. It allows you to load any WPF controls to [TemplateViewDefinition.RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) in order to display the additional information of a row. You can expand or collapse the row template view by using an expander in a row or programmatically.
+`DataGrid` provides support to represent additional information of a row using [TemplateViewDefinition](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html) that can be defined in datagrid. It allows you to load any WPF controls to [TemplateViewDefinition.RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) in order to display the additional information of a row. You can expand or collapse the row template view by using an expander in a row or programmatically.
 
 ## Defining row template
 
-Record Template view can be generated for the rows by using the [RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) defined in the [TemplateViewDefinition](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html).
-	Follow the below steps to define the row template,
-	•	Create [TemplateViewDefinition](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html).
-	•	Define data template for the [TemplateViewDefinition.RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) property.
-	•	Then add [TemplateViewDefinition](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html) to the [SfDataGrid.DetailsViewDefinition](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.DetailsViewDefinition.html).
+Record Template view can be generated for the rows by using the [RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) defined in the `TemplateViewDefinition`.
+	
+Follow the below steps to define the row template,
+* Create `TemplateViewDefinition`.
+
+* Define data template for the `TemplateViewDefinition.RowTemplate` property.
+* Then add `TemplateViewDefinition` to the [SfDataGrid.DetailsViewDefinition](http://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.DetailsViewDefinition.html).
 	
 You can bind the row data using the Data.PropertyName (where Data is the underlying object bound)
 
-``` Xaml
-
+``` xml
 <Window.Resources>              
      <DataTemplate x:Key="DetailsViewTemplate">
          <Grid>
@@ -170,14 +171,13 @@ You can bind the row data using the Data.PropertyName (where Data is the underly
 
 ```
 
-![RecordTemplateView](Images/DetailsViewTemplate_Image1.png)
+![Adding row details using the RowTemplate](DefiningRowTemplate.png)
 
 ## Defining RowTemplateSelector
 
 You can to choose different DataTemplate for the record template view definitions based on underlying data object by using [TemplateViewDefinition.RowTemplateSelector](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplateSelector) property.
 
-```Xaml
-
+``` xml
 <Window.Resources>            
     <DataTemplate x:Key="DetailsViewTemplate_WithImage">
         <Grid>
@@ -465,7 +465,7 @@ You can to choose different DataTemplate for the record template view definition
 </syncfusion:SfDataGrid>
 
 ```
-![RecordTemplateView_TemplateSelector](Images/DetailsViewTemplate_Image2.png)
+![Adding row details using the RowTemplateSelector](RowDetailsUsingRowTemplateSelector.png)
 
 ## Height customization
 
@@ -473,10 +473,9 @@ You can customize height of the row that contains [RowTemplate](https://help.syn
 
 ## Populating record template view using events 
 
-You can set the [RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) on-demand when expanding the record by using the [GridDetailsViewExpandingEventArgs.RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs.html#Syncfusion_UI_Xaml_Grid_GridDetailsViewExpandingEventArgs_RowTemplate) property in [SfDataGrid.DetailsViewExpanding](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html) event handler.
+You can set the [RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.TemplateViewDefinition.html#Syncfusion_UI_Xaml_Grid_TemplateViewDefinition_RowTemplate) on-demand when expanding the record by using the [GridDetailsViewExpandingEventArgs.RowTemplate](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs.html#Syncfusion_UI_Xaml_Grid_GridDetailsViewExpandingEventArgs_RowTemplate) property in [SfDataGrid.DetailsViewExpanding](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_DetailsViewExpanding) event handler.
 
 ```c#
-
 this.dataGrid.DetailsViewExpanding += DataGrid_DetailsViewExpanding;
 
 private void DataGrid_DetailsViewExpanding(object sender, Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs e)
@@ -493,13 +492,9 @@ private DataTemplate GetDataTemplate()
     var dataTemplate = new DataTemplate() { VisualTree = textBlock };
     return dataTemplate;
 }
-
 ```
 
-KB article - [How to add row details to wpf datagrid?](https://www.syncfusion.com/kb/12320/how-to-add-row-details-to-wpf-datagrid-sfdatagrid)
+Take a moment to peruse the [WPF DataGrid - Record Template View](https://help.syncfusion.com/wpf/datagrid/record-template-view) documentation, where you can find about row details with code examples.
 
 ## Requirements to run the demo 
-
 Visual Studio 2015 and above versions.
-
-
